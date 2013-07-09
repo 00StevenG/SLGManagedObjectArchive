@@ -23,6 +23,27 @@
 		E94B6698178C55A600B78033 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94B6673178C55A500B78033 /* Foundation.framework */; };
 		E94B66A0178C55A600B78033 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E94B669E178C55A600B78033 /* InfoPlist.strings */; };
 		E94B66A3178C55A600B78033 /* SLGManagedObjectArchiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66A2178C55A600B78033 /* SLGManagedObjectArchiveTests.m */; };
+		E94B66B3178C55E400B78033 /* ArchivesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66AE178C55E400B78033 /* ArchivesTableViewController.m */; };
+		E94B66B4178C55E400B78033 /* ArchivesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66AE178C55E400B78033 /* ArchivesTableViewController.m */; };
+		E94B66B5178C55E400B78033 /* CarsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66B0178C55E400B78033 /* CarsTableViewController.m */; };
+		E94B66B6178C55E400B78033 /* CarsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66B0178C55E400B78033 /* CarsTableViewController.m */; };
+		E94B66B7178C55E400B78033 /* SelectCarsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66B2178C55E400B78033 /* SelectCarsTableViewController.m */; };
+		E94B66B8178C55E400B78033 /* SelectCarsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66B2178C55E400B78033 /* SelectCarsTableViewController.m */; };
+		E94B66BD178C55FE00B78033 /* Automaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66BA178C55FE00B78033 /* Automaker.m */; };
+		E94B66BE178C55FE00B78033 /* Automaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66BA178C55FE00B78033 /* Automaker.m */; };
+		E94B66BF178C55FE00B78033 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66BC178C55FE00B78033 /* Car.m */; };
+		E94B66C0178C55FE00B78033 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66BC178C55FE00B78033 /* Car.m */; };
+		E94B66C2178C563D00B78033 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94B66C1178C563D00B78033 /* CoreData.framework */; };
+		E94B66C4178C56A200B78033 /* cars.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E94B66C3178C56A200B78033 /* cars.sqlite */; };
+		E94B66C5178C56A200B78033 /* cars.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E94B66C3178C56A200B78033 /* cars.sqlite */; };
+		E94B66C8178C56BD00B78033 /* SLGManagedObjectArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66C7178C56BD00B78033 /* SLGManagedObjectArchive.m */; };
+		E94B66C9178C56BD00B78033 /* SLGManagedObjectArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = E94B66C7178C56BD00B78033 /* SLGManagedObjectArchive.m */; };
+		E94B66CC178C571500B78033 /* SelectCars.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94B66CA178C571500B78033 /* SelectCars.storyboard */; };
+		E94B66CD178C571500B78033 /* SelectCars.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94B66CA178C571500B78033 /* SelectCars.storyboard */; };
+		E94B66CE178C571500B78033 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94B66CB178C571500B78033 /* Storyboard.storyboard */; };
+		E94B66CF178C571500B78033 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94B66CB178C571500B78033 /* Storyboard.storyboard */; };
+		E94B66D2178C577B00B78033 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E94B66D0178C577B00B78033 /* DataModel.xcdatamodeld */; };
+		E94B66D3178C577B00B78033 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E94B66D0178C577B00B78033 /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +79,23 @@
 		E94B669F178C55A600B78033 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E94B66A1178C55A600B78033 /* SLGManagedObjectArchiveTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLGManagedObjectArchiveTests.h; sourceTree = "<group>"; };
 		E94B66A2178C55A600B78033 /* SLGManagedObjectArchiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLGManagedObjectArchiveTests.m; sourceTree = "<group>"; };
+		E94B66AD178C55E400B78033 /* ArchivesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchivesTableViewController.h; sourceTree = "<group>"; };
+		E94B66AE178C55E400B78033 /* ArchivesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchivesTableViewController.m; sourceTree = "<group>"; };
+		E94B66AF178C55E400B78033 /* CarsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarsTableViewController.h; sourceTree = "<group>"; };
+		E94B66B0178C55E400B78033 /* CarsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarsTableViewController.m; sourceTree = "<group>"; };
+		E94B66B1178C55E400B78033 /* SelectCarsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCarsTableViewController.h; sourceTree = "<group>"; };
+		E94B66B2178C55E400B78033 /* SelectCarsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCarsTableViewController.m; sourceTree = "<group>"; };
+		E94B66B9178C55FE00B78033 /* Automaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Automaker.h; sourceTree = "<group>"; };
+		E94B66BA178C55FE00B78033 /* Automaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Automaker.m; sourceTree = "<group>"; };
+		E94B66BB178C55FE00B78033 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		E94B66BC178C55FE00B78033 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		E94B66C1178C563D00B78033 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E94B66C3178C56A200B78033 /* cars.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = cars.sqlite; sourceTree = "<group>"; };
+		E94B66C6178C56BD00B78033 /* SLGManagedObjectArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGManagedObjectArchive.h; sourceTree = "<group>"; };
+		E94B66C7178C56BD00B78033 /* SLGManagedObjectArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGManagedObjectArchive.m; sourceTree = "<group>"; };
+		E94B66CA178C571500B78033 /* SelectCars.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectCars.storyboard; sourceTree = "<group>"; };
+		E94B66CB178C571500B78033 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		E94B66D1178C577B00B78033 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E94B66C2178C563D00B78033 /* CoreData.framework in Frameworks */,
 				E94B6672178C55A500B78033 /* UIKit.framework in Frameworks */,
 				E94B6674178C55A500B78033 /* Foundation.framework in Frameworks */,
 				E94B6676178C55A500B78033 /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +126,9 @@
 		E94B6665178C55A500B78033 = {
 			isa = PBXGroup;
 			children = (
+				E94B66C6178C56BD00B78033 /* SLGManagedObjectArchive.h */,
+				E94B66C7178C56BD00B78033 /* SLGManagedObjectArchive.m */,
+				E94B66AC178C55BE00B78033 /* demo */,
 				E94B6677178C55A500B78033 /* SLGManagedObjectArchive */,
 				E94B669B178C55A600B78033 /* SLGManagedObjectArchiveTests */,
 				E94B6670178C55A500B78033 /* Frameworks */,
@@ -106,6 +148,7 @@
 		E94B6670178C55A500B78033 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E94B66C1178C563D00B78033 /* CoreData.framework */,
 				E94B6671178C55A500B78033 /* UIKit.framework */,
 				E94B6673178C55A500B78033 /* Foundation.framework */,
 				E94B6675178C55A500B78033 /* CoreGraphics.framework */,
@@ -130,6 +173,10 @@
 		E94B6678178C55A500B78033 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E94B66D0178C577B00B78033 /* DataModel.xcdatamodeld */,
+				E94B66CA178C571500B78033 /* SelectCars.storyboard */,
+				E94B66CB178C571500B78033 /* Storyboard.storyboard */,
+				E94B66C3178C56A200B78033 /* cars.sqlite */,
 				E94B6679178C55A500B78033 /* SLGManagedObjectArchive-Info.plist */,
 				E94B667A178C55A500B78033 /* InfoPlist.strings */,
 				E94B667D178C55A500B78033 /* main.m */,
@@ -158,6 +205,23 @@
 				E94B669E178C55A600B78033 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E94B66AC178C55BE00B78033 /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				E94B66B9178C55FE00B78033 /* Automaker.h */,
+				E94B66BA178C55FE00B78033 /* Automaker.m */,
+				E94B66BB178C55FE00B78033 /* Car.h */,
+				E94B66BC178C55FE00B78033 /* Car.m */,
+				E94B66AD178C55E400B78033 /* ArchivesTableViewController.h */,
+				E94B66AE178C55E400B78033 /* ArchivesTableViewController.m */,
+				E94B66AF178C55E400B78033 /* CarsTableViewController.h */,
+				E94B66B0178C55E400B78033 /* CarsTableViewController.m */,
+				E94B66B1178C55E400B78033 /* SelectCarsTableViewController.h */,
+				E94B66B2178C55E400B78033 /* SelectCarsTableViewController.m */,
+			);
+			name = demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +301,9 @@
 				E94B6686178C55A500B78033 /* Default@2x.png in Resources */,
 				E94B6688178C55A500B78033 /* Default-568h@2x.png in Resources */,
 				E94B668E178C55A500B78033 /* SLGViewController.xib in Resources */,
+				E94B66C4178C56A200B78033 /* cars.sqlite in Resources */,
+				E94B66CC178C571500B78033 /* SelectCars.storyboard in Resources */,
+				E94B66CE178C571500B78033 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +312,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94B66A0178C55A600B78033 /* InfoPlist.strings in Resources */,
+				E94B66C5178C56A200B78033 /* cars.sqlite in Resources */,
+				E94B66CD178C571500B78033 /* SelectCars.storyboard in Resources */,
+				E94B66CF178C571500B78033 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +344,13 @@
 				E94B667E178C55A500B78033 /* main.m in Sources */,
 				E94B6682178C55A500B78033 /* SLGAppDelegate.m in Sources */,
 				E94B668B178C55A500B78033 /* SLGViewController.m in Sources */,
+				E94B66B3178C55E400B78033 /* ArchivesTableViewController.m in Sources */,
+				E94B66B5178C55E400B78033 /* CarsTableViewController.m in Sources */,
+				E94B66B7178C55E400B78033 /* SelectCarsTableViewController.m in Sources */,
+				E94B66BD178C55FE00B78033 /* Automaker.m in Sources */,
+				E94B66BF178C55FE00B78033 /* Car.m in Sources */,
+				E94B66C8178C56BD00B78033 /* SLGManagedObjectArchive.m in Sources */,
+				E94B66D2178C577B00B78033 /* DataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +359,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94B66A3178C55A600B78033 /* SLGManagedObjectArchiveTests.m in Sources */,
+				E94B66B4178C55E400B78033 /* ArchivesTableViewController.m in Sources */,
+				E94B66B6178C55E400B78033 /* CarsTableViewController.m in Sources */,
+				E94B66B8178C55E400B78033 /* SelectCarsTableViewController.m in Sources */,
+				E94B66BE178C55FE00B78033 /* Automaker.m in Sources */,
+				E94B66C0178C55FE00B78033 /* Car.m in Sources */,
+				E94B66C9178C56BD00B78033 /* SLGManagedObjectArchive.m in Sources */,
+				E94B66D3178C577B00B78033 /* DataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +548,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E94B66D0178C577B00B78033 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E94B66D1178C577B00B78033 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = E94B66D1178C577B00B78033 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E94B6666178C55A500B78033 /* Project object */;
 }

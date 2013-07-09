@@ -15,5 +15,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) SLGViewController *viewController;
+@property(nonatomic,readonly) NSManagedObjectContext* context;
 
 @end
