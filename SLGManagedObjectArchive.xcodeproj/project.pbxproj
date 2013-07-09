@@ -79,16 +79,16 @@
 		E94B669F178C55A600B78033 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E94B66A1178C55A600B78033 /* SLGManagedObjectArchiveTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLGManagedObjectArchiveTests.h; sourceTree = "<group>"; };
 		E94B66A2178C55A600B78033 /* SLGManagedObjectArchiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLGManagedObjectArchiveTests.m; sourceTree = "<group>"; };
-		E94B66AD178C55E400B78033 /* ArchivesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchivesTableViewController.h; sourceTree = "<group>"; };
-		E94B66AE178C55E400B78033 /* ArchivesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchivesTableViewController.m; sourceTree = "<group>"; };
-		E94B66AF178C55E400B78033 /* CarsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarsTableViewController.h; sourceTree = "<group>"; };
-		E94B66B0178C55E400B78033 /* CarsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarsTableViewController.m; sourceTree = "<group>"; };
-		E94B66B1178C55E400B78033 /* SelectCarsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCarsTableViewController.h; sourceTree = "<group>"; };
-		E94B66B2178C55E400B78033 /* SelectCarsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCarsTableViewController.m; sourceTree = "<group>"; };
+		E94B66AD178C55E400B78033 /* ArchivesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ArchivesTableViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E94B66AE178C55E400B78033 /* ArchivesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ArchivesTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E94B66AF178C55E400B78033 /* CarsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CarsTableViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E94B66B0178C55E400B78033 /* CarsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CarsTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E94B66B1178C55E400B78033 /* SelectCarsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SelectCarsTableViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E94B66B2178C55E400B78033 /* SelectCarsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SelectCarsTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E94B66B9178C55FE00B78033 /* Automaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Automaker.h; sourceTree = "<group>"; };
 		E94B66BA178C55FE00B78033 /* Automaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Automaker.m; sourceTree = "<group>"; };
-		E94B66BB178C55FE00B78033 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
-		E94B66BC178C55FE00B78033 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		E94B66BB178C55FE00B78033 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Car.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E94B66BC178C55FE00B78033 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Car.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E94B66C1178C563D00B78033 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E94B66C3178C56A200B78033 /* cars.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = cars.sqlite; sourceTree = "<group>"; };
 		E94B66C6178C56BD00B78033 /* SLGManagedObjectArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGManagedObjectArchive.h; sourceTree = "<group>"; };
@@ -538,6 +538,7 @@
 				E94B66A8178C55A600B78033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E94B66A9178C55A600B78033 /* Build configuration list for PBXNativeTarget "SLGManagedObjectArchiveTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +547,7 @@
 				E94B66AB178C55A600B78033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

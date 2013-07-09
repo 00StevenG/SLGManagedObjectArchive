@@ -8,7 +8,8 @@
 #import <Foundation/Foundation.h>
 
 
-
+// block object called when stored reference (NSManagedObjectID) is unfound in the passed context
+// Return an managedObject to have it inserted into the archive in it's place
 typedef NSManagedObject*(^SLGManagedObjectArchiveUnfoundObjectBlock)(NSManagedObjectID* objectID);
 
 

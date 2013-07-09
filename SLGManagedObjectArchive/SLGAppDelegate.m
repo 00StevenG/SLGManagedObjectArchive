@@ -27,11 +27,7 @@
 //
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // NSManagedObjectContext* context = [self managedObjectContext];
-    //[[self class]mockDataInContext:context];
-    
     return YES;
-    
 }
 #pragma mark CORE DATA
 //
