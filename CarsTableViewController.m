@@ -31,7 +31,7 @@
     }
     return self;
 }
-
+#pragma mark - View Lifecycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -44,7 +44,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark - IBACTIONS
 -(IBAction)addCarAction:(id)sender{
     
     
@@ -68,11 +68,10 @@
     
     [self setEditing:!self.editing animated:YES];
 }
+#pragma mark SelectCarsTableViewControllerDelegate
 -(void)selectCarTableController:(SelectCarsTableViewController*)controller didSelectCars:(NSArray*)cars{
     
-    
-    
-    
+
     for(Car *car in cars){
         [_carArchive addObject:car];
     }

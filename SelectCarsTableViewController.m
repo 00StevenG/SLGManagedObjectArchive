@@ -63,7 +63,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark - IBActions
+-(IBAction)doneButtonAction:(id)sender{
+    
+    NSArray* selectedCars = [NSArray arrayWithArray:_selectedCars];
+    [self.delegate selectCarTableController:self didSelectCars:selectedCars];
+    
+}
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -84,13 +90,6 @@
     cell.detailTextLabel.text  =car.model;
 
     return cell;
-}
-#pragma mark - IBActions
--(IBAction)doneButtonAction:(id)sender{
-    
-    NSArray* selectedCars = [NSArray arrayWithArray:_selectedCars];
-    [self.delegate selectCarTableController:self didSelectCars:selectedCars];
-    
 }
 #pragma mark - Table view delegate
 //

@@ -28,25 +28,10 @@
     }
     return self;
 }
-#pragma mark - Segue
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    
-    if([[segue identifier]isEqualToString:@"carsSegue"]){
-        
-        CarsTableViewController* carsController = (CarsTableViewController*)segue.destinationViewController;
-        SLGManagedObjectArchive* archive = [_archives objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-        carsController.carArchive = archive;
-        carsController.context = self.context;
-        
-        
-    }
-    
-    
-}
+#pragma mark Internal
 -(void)_writeArchivesToDisk{
     
-
+    
     NSData* data = [NSKeyedArchiver archivedDataWithRootObject:_archives];
     [[NSUserDefaults standardUserDefaults]setObject:data forKey:@"archives"];
     [[NSUserDefaults standardUserDefaults]synchronize];
@@ -63,22 +48,39 @@
         _archives = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     }
 }
+#pragma mark - Segue
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    
+    if([[segue identifier]isEqualToString:@"carsSegue"]){
+        
+        CarsTableViewController* carsController = (CarsTableViewController*)segue.destinationViewController;
+        SLGManagedObjectArchive* archive = [_archives objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+        carsController.carArchive = archive;
+        carsController.context = self.context;
+        
+        
+    }
+    
+    
+}
+#pragma mark - View Lifecycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-
-
+    
+    
+    
     
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
+    
     
     [self _readArchivesFromDisk];
     
     
     if(_archives==nil)
         _archives = [[NSMutableArray alloc]init];
-
+    
     SLGAppDelegate* appD = [UIApplication sharedApplication].delegate;
     self.context = [appD context];
     
@@ -86,7 +88,7 @@
 }
 -(void)viewDidAppear:(BOOL)animated{
     
-
+    
     [self.tableView reloadData];
     
     
@@ -96,10 +98,59 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark -IBActions
+//
+//
+//
+-(IBAction)addArchiveAction:(id)sender{
+    
+    
+    UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"SelectCars" bundle:nil];
+    UINavigationController* nController =[storyBoard instantiateInitialViewController];
+    SelectCarsTableViewController* carsController =(SelectCarsTableViewController*)nController.topViewController;
+    
+    carsController.delegate = self;
+    carsController.context = self.context;
+    
+    [self presentViewController:nController
+                       animated:YES
+                     completion:NULL];
+    
+    
+}
+-(IBAction)editButtonAction:(id)sender{
+    
+    [self setEditing:!self.editing animated:YES];
+}
+#pragma mark - SelectCarsTableViewControllerDelegate
+-(void)selectCarTableController:(SelectCarsTableViewController*)controller didSelectCars:(NSArray*)cars{
+    
+    
+    NSString* newName= [NSString stringWithFormat:@"New Archive %i",[_archives count]+1];
+    SLGManagedObjectArchive* newArchive = [[SLGManagedObjectArchive alloc]initWithArchiveName:newName];
+    
+    
+    for(Car *car in cars){
+        [newArchive addObject:car];
+    }
+    
+    [_archives addObject:newArchive];
+    [self dismissViewControllerAnimated:YES
+                             completion:^{
+                                 [self.tableView reloadData];
+                                 
+                                 
+                                 [self _writeArchivesToDisk];
+                                 _archives = nil;
+                                 [self _readArchivesFromDisk];
+                                 
+                                 
+                             }];
+    
+    
+    
+}
 #pragma mark - Table view data source
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [_archives count];
@@ -115,56 +166,6 @@
     cell.detailTextLabel.text= [NSString stringWithFormat:@"%i objects",[archive count]];
     
     return cell;
-}
-//
-//
-//
--(IBAction)addArchiveAction:(id)sender{
-    
-    
-    UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"SelectCars" bundle:nil];
-    UINavigationController* nController =[storyBoard instantiateInitialViewController];
-    SelectCarsTableViewController* carsController =(SelectCarsTableViewController*)nController.topViewController;
-    
-    carsController.delegate = self;
-    carsController.context = self.context;
-
-    [self presentViewController:nController
-                       animated:YES
-                     completion:NULL];
-    
-    
-}
--(IBAction)editButtonAction:(id)sender{
-    
-    [self setEditing:!self.editing animated:YES];
-}
--(void)selectCarTableController:(SelectCarsTableViewController*)controller didSelectCars:(NSArray*)cars{
-    
-    
-    NSString* newName= [NSString stringWithFormat:@"New Archive %i",[_archives count]+1];
-    SLGManagedObjectArchive* newArchive = [[SLGManagedObjectArchive alloc]initWithArchiveName:newName];
-    
-    
-    for(Car *car in cars){
-        [newArchive addObject:car];
-    }
-    
-    [_archives addObject:newArchive];    
-    [self dismissViewControllerAnimated:YES
-                             completion:^{
-                                 [self.tableView reloadData];
-
-                                 
-                                 [self _writeArchivesToDisk];
-                                 _archives = nil;
-                                 [self _readArchivesFromDisk];
-                                 
-                                 
-                             }];
-    
-    
-
 }
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -188,9 +189,4 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-
-
-
-#pragma mark - Table view delegate
-
 @end

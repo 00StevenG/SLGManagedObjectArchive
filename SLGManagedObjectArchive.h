@@ -16,6 +16,7 @@ typedef NSManagedObject*(^SLGManagedObjectArchiveUnfoundObjectBlock)(NSManagedOb
 @interface SLGManagedObjectArchive : NSObject <NSCoding>
 
 
+
 -(id)initWithArchiveName:(NSString*)name;
 
 @property(nonatomic,readwrite)NSString* archiveName;
@@ -23,15 +24,22 @@ typedef NSManagedObject*(^SLGManagedObjectArchiveUnfoundObjectBlock)(NSManagedOb
 @property(nonatomic,readonly)NSArray* managedObjectIds;
 
 
+// collection like operations
 -(void)addObject:(NSManagedObject*)object;
 -(BOOL)containsObject:(NSManagedObject*)object;
 -(BOOL)removeObject:(NSManagedObject*)object;
 -(id)objectAtIndex:(NSUInteger)idx inContext:(NSManagedObjectContext*)context;
 
--(NSArray*)fetchArchiveObjectsInContext:(NSManagedObjectContext*)context;
 
+// fetch the NSManagedObjects from the passed context
+// callback block is called when an NSManagedObjectID is not found using the provided context
 -(NSArray*)fetchArchiveObjectsInContext:(NSManagedObjectContext *)context
                               withBlock:(SLGManagedObjectArchiveUnfoundObjectBlock)block;
+
+
+// same as above call. Unfound object will be ignored
+-(NSArray*)fetchArchiveObjectsInContext:(NSManagedObjectContext*)context;
+
 
 
 @end

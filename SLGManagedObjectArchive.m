@@ -184,8 +184,10 @@
             object = block(objectID);
         }
         
-        if(object)
+        if(object){
             [mARR addObject:object];
+            
+        }
         
     }
     return [NSArray arrayWithArray:mARR];
