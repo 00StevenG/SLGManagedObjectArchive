@@ -31,6 +31,7 @@
 #pragma mark Internal
 -(void)_writeArchivesToDisk{
     
+
     
     NSData* data = [NSKeyedArchiver archivedDataWithRootObject:_archives];
     [[NSUserDefaults standardUserDefaults]setObject:data forKey:@"archives"];
@@ -40,12 +41,18 @@
     
 }
 -(void)_readArchivesFromDisk{
+
     
     NSData* data =
     [[NSUserDefaults standardUserDefaults]objectForKey:@"archives"];
     
     if(data){
         _archives = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        for(SLGManagedObjectArchive *archive in _archives){
+            
+            archive.context = self.context;
+            
+        }
     }
 }
 #pragma mark - Segue
@@ -58,11 +65,7 @@
         SLGManagedObjectArchive* archive = [_archives objectAtIndex:self.tableView.indexPathForSelectedRow.row];
         carsController.carArchive = archive;
         carsController.context = self.context;
-        
-        
     }
-    
-    
 }
 #pragma mark - View Lifecycle
 - (void)viewDidLoad
@@ -127,7 +130,8 @@
     
     
     NSString* newName= [NSString stringWithFormat:@"New Archive %i",[_archives count]+1];
-    SLGManagedObjectArchive* newArchive = [[SLGManagedObjectArchive alloc]initWithArchiveName:newName];
+    SLGManagedObjectArchive* newArchive = [[SLGManagedObjectArchive alloc]initWithArchiveName:newName andContext:self.context];
+    
     
     
     for(Car *car in cars){
@@ -137,13 +141,17 @@
     [_archives addObject:newArchive];
     [self dismissViewControllerAnimated:YES
                              completion:^{
-                                 [self.tableView reloadData];
                                  
                                  
+                                 // yes this is overkill
                                  [self _writeArchivesToDisk];
                                  _archives = nil;
                                  [self _readArchivesFromDisk];
                                  
+                                 
+                                 
+                                 [self.tableView reloadData];
+
                                  
                              }];
     
@@ -160,6 +168,7 @@
 {
     static NSString *CellIdentifier = @"archiveCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
     
     SLGManagedObjectArchive* archive = [_archives objectAtIndex:indexPath.row];
     cell.textLabel.text = archive.archiveName;

@@ -95,7 +95,9 @@
 {
     static NSString *CellIdentifier = @"carCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    Car *car = [_carArchive objectAtIndex:indexPath.row inContext:self.context];
+    _carArchive.context = self.context;
+    Car *car = [_carArchive objectAtIndex:indexPath.row];
+    
 
     
     cell.textLabel.text = car.automaker.name;
@@ -117,7 +119,8 @@
         
         
         // Delete the row from the data source
-        Car *aCar = [_carArchive objectAtIndex:indexPath.row inContext:self.context];
+        _carArchive.context = self.context;
+        Car *aCar = [_carArchive objectAtIndex:indexPath.row];
         [_carArchive removeObject:aCar];
         
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];

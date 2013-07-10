@@ -78,7 +78,9 @@
     
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                              [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
-                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption,
+                             [NSNumber numberWithBool:YES],NSReadOnlyPersistentStoreOption,
+                             nil];
     
     
     [persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
